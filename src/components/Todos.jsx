@@ -1,11 +1,11 @@
 import React from 'react'
 import TodoItem from './TodoItem'
 
-const Todos = ({ todos, todoCompleted }) => {
+const Todos = ({ todos, todoCompleted, deleteTodo }) => {
   return (
     <div style={styles.container}>
       {todos.map((todo) => {
-        return <TodoItem key={todo.id} todo={todo} todoCompleted={todoCompleted} />
+        return <TodoItem key={todo.id} todo={todo} todoCompleted={todoCompleted} deleteTodo={deleteTodo} />
       })}
     </div>
   )
